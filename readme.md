@@ -1,18 +1,33 @@
-# C++ Boilerplate
+# Human Obstacle Detector - ACME
 [![Build Status](https://travis-ci.org/cunninghamr/cpp-boilerplate.svg?branch=master)](https://travis-ci.org/cunninghamr/cpp-boilerplate)
 [![Coverage Status](https://coveralls.io/repos/github/cunninghamr/cpp-boilerplate/badge.svg?branch=master)](https://coveralls.io/github/cunninghamr/cpp-boilerplate?branch=master)
 ---
 
 ## Overview
 
-Simple starter C++ project with:
+This project will utilize OpenCV functions for the implementation of different classes to detect humans as obstacles. Here, you will see the utilization of Histogram of Oriented Gradients (HOG) and Support Vector Machines (SVM) to accomplish such task.
 
-- cmake
-- googletest
+You will also see the usage of the AIP process and pair programming. In addition you will find different iterations of UML diagrams as the design of the source codes progress. 
+
+Implementation:
+
+- TDD
+- OOP Principles
+- C++11/14
+- cppcheck
+- Google style guide with cpplint
+
+
+Testing:
+
+- Unit Tests
+- Test Coverage with Coveralls
+- Passing tests on Travis
+
 
 ## Standard install via command-line
 ```
-git clone --recursive https://github.com/cunninghamr/cpp-boilerplate
+git clone --recursive https://github.com/cunninghamr/HumanObstacleDetector
 cd <path to repository>
 mkdir build
 cd build
@@ -22,7 +37,7 @@ Run tests: ./test/cpp-test
 Run program: ./app/shell-app
 ```
 
-## Building for code coverage (for assignments beginning in Week 4)
+## Building for code coverage
 ```
 sudo apt-get install lcov
 cmake -D COVERAGE=ON -D CMAKE_BUILD_TYPE=Debug ../
