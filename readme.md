@@ -27,7 +27,12 @@ Testing:
 
 ## AIP Google Sheet
 
-https://drive.google.com/open?id=126zLt1lSblD5ETv1A1dsDVm8PN0eeLzd
+https://drive.google.com/file/d/1tollRMMNQe3B8FCTQr8AEhi9hTGRpPKR/view?usp=sharing
+
+
+## Review of Iteration 1 Plan
+
+https://docs.google.com/document/d/1hpV3EcaRyg9J7VAmwT8K__PkkRvtQr3ay-QYJ0cU4dg/edit?usp=sharing
 
 
 ## Standard install via command-line
