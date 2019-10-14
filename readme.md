@@ -56,6 +56,10 @@ make code_coverage
 ```
 This generates a index.html page in the build/coverage sub-directory that can be viewed locally in a web browser.
 
+## Dependencies
+
+Stub to be completed in Iteration 2.
+
 ## Working with Eclipse IDE ##
 
 ## Installation
@@ -91,13 +95,20 @@ Source files may be edited under the "[Source Directory]" label in the Project E
 To build the project, in Eclipse, unfold boilerplate-eclipse project in Project Explorer,
 unfold Build Targets, double click on "all" to build all projects.
 
-## Run
+## Test
+
+Stub to be completed in Iteration 2.
+
+## Run/Demo
 
 1. In Eclipse, right click on the boilerplate-eclipse in Project Explorer,
 select Run As -> Local C/C++ Application
 
 2. Choose the binaries to run (e.g. shell-app, cpp-test for unit testing)
 
+## Known Issues/Bugs
+
+Stub to be completed in Iteration 2.
 
 ## Debug
 
