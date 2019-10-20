@@ -20,7 +20,7 @@ TEST(ProgramOptionsTest, testNoOptions) {
 
   try {
     // first option is program name
-    char* argv[] = { "" };
+    const char* argv[] = { "hi" };
     int argc = 1;
 
     options.parse(argc, argv);
@@ -34,7 +34,7 @@ TEST(ProgramOptionsTest, testGetValueNotProvided) {
   ProgramOptions options = ProgramOptions();
 
   // first option is program name
-  char* argv[] = { "", "--positive-test-images-path", "" };
+  const char* argv[] = { "", "--positive-test-images-path", "" };
   int argc = 3;
 
   options.parse(argc, argv);
@@ -51,7 +51,7 @@ TEST(ProgramOptionsTest, testGetValueProvided) {
   ProgramOptions options = ProgramOptions();
 
   // first option is program name
-  char* argv[] = { "", "--positive-test-images-path", "" };
+  const char* argv[] = { "", "--positive-test-images-path", "" };
   int argc = 3;
 
   options.parse(argc, argv);
@@ -59,7 +59,3 @@ TEST(ProgramOptionsTest, testGetValueProvided) {
   // if this throws an exception then the test will fail
   options.getValue("positive-test-images-path");
 }
-
-
-
-
