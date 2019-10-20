@@ -22,5 +22,6 @@ TEST(DataTest, testLoadImages) {
   std::vector<cv::Mat> images = Data::loadImages(imagesPath);
 
   // verify that 4 images are loaded
-  EXPECT_EQ(4, images.size());
+  size_t expected_eq = 4;
+  EXPECT_EQ(expected_eq, images.size());
 }
