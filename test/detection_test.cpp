@@ -26,8 +26,9 @@ TEST(DetectionTest, testNoHumanInImage) {
   std::vector<cv::Mat> images = Data::loadImages(imagesPath);
 
   // verify each image detects 0 humans
+  size_t expected_eq = 0;
   for (auto image : images) {
-    EXPECT_EQ(0, detector.detect(image).size());
+    EXPECT_EQ(expected_eq, detector.detect(image).size());
   }
 }
 
@@ -39,8 +40,9 @@ TEST(DetectionTest, testHumanInImage) {
   std::vector<cv::Mat> images = Data::loadImages(imagesPath);
 
   // verify each image detects at least 1 human
+  size_t expected_lt = 0;
   for (auto image : images) {
-    EXPECT_LT(0, detector.detect(image).size());
+    EXPECT_LT(expected_lt, detector.detect(image).size());
   }
 }
 
@@ -52,5 +54,6 @@ TEST(DetectionTest, testMulitpleHumansInImage) {
   cv::Mat image = Data::loadImage(imagePath);
 
   // verify the image has more than 1 human
-  EXPECT_LT(1, detector.detect(image).size());
+  size_t expected_lt = 1;
+  EXPECT_LT(expected_lt, detector.detect(image).size());
 }

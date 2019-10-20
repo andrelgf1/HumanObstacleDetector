@@ -25,7 +25,7 @@ ProgramOptions::ProgramOptions()
       "Path to directory containing negative test images");
 }
 
-void ProgramOptions::parse(int argc, char* argv[]) {
+void ProgramOptions::parse(int argc, const char* argv[]) {
   /// get and store the parsed options
   po::store(po::command_line_parser(argc, argv).options(description).run(),
             optionValues);

@@ -1,10 +1,11 @@
 /**
- * Program Options
+ * @file program_options.hpp
  * @brief Class allows for command line arguments for setting path.
  * @author Ryan Cunningham
  * @author Pablo Sanhueza
  * @author Andre Gomes
  * @copyright 2019 Ryan Cunningham, Pablo Sanhueza, Andre Gomes
+ * Distributed under the BSD License (license terms found in LICENSE or at https://www.freebsd.org/copyright/freebsd-license.html)
  */
 
 #ifndef INCLUDE_PROGRAM_OPTIONS_HPP_
@@ -24,7 +25,7 @@ class ProgramOptions {
    * @param argc the number of arguments
    * @param argv the list of arguments
    */
-  void parse(int argc, char* argv[]);
+  void parse(int argc, const char* argv[]);
 
   /**
    * Gets the value for an options
