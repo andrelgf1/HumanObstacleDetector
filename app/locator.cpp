@@ -73,15 +73,15 @@ cv::Rect Locator::getPixelData() {
 }
 
 
-void Locator::worldPos() {
-  cv::Mat temp;
+cv::Mat Locator::worldPos() {
+  
 
   /// Calculates real world coordinate with intrinsic and extrinsic camera parameters.
  /// worldCoord = (((pixelCoord * _intrinsicM.inv()) - _transVec ) * _rotationM.inv()) / 1000;
 
   cv::Mat homography = _intrinsicM*_rotationM;
   worldCoord = pixelCoord * homography.inv();
-
+  return worldCoord;
 }
 
 void Locator::printPositions() {

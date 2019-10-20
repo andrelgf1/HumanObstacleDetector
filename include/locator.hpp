@@ -60,9 +60,9 @@ class Locator {
    /**
     * @brief Calculations to obtain Real World Coordinates. Highly important to detect distance of object.
     * @param none
-    * @return none
+    * @return worldCoord
     */
-    void worldPos();
+   cv::Mat worldPos();
 
    /**
     * @brief Prints the Real World Coordinates
