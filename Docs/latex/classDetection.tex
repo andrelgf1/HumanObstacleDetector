@@ -1,0 +1,50 @@
+\hypertarget{classDetection}{}\section{Detection Class Reference}
+\label{classDetection}\index{Detection@{Detection}}
+
+
+{\ttfamily \#include $<$detection.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classDetection_a86e6ebf5a660a29e78ee7a7f08292260}{Detection} ()
+\item 
+std\+::vector$<$ cv\+::\+Rect $>$ \hyperlink{classDetection_a039afb9f14939240b1ec7dd00c04fbfe}{detect} (const cv\+::\+Mat \&image)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Performs Histogram of Gradients detection of humans in images using Support Vector Machines. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Detection@{Detection}!Detection@{Detection}}
+\index{Detection@{Detection}!Detection@{Detection}}
+\subsubsection[{\texorpdfstring{Detection()}{Detection()}}]{\setlength{\rightskip}{0pt plus 5cm}Detection\+::\+Detection (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classDetection_a86e6ebf5a660a29e78ee7a7f08292260}{}\label{classDetection_a86e6ebf5a660a29e78ee7a7f08292260}
+Initializes the H\+OG descriptor. 
+
+\subsection{Member Function Documentation}
+\index{Detection@{Detection}!detect@{detect}}
+\index{detect@{detect}!Detection@{Detection}}
+\subsubsection[{\texorpdfstring{detect(const cv\+::\+Mat \&image)}{detect(const cv::Mat &image)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ cv\+::\+Rect $>$ Detection\+::detect (
+\begin{DoxyParamCaption}
+\item[{const cv\+::\+Mat \&}]{image}
+\end{DoxyParamCaption}
+)}\hypertarget{classDetection_a039afb9f14939240b1ec7dd00c04fbfe}{}\label{classDetection_a039afb9f14939240b1ec7dd00c04fbfe}
+Detects humans in images using H\+OG and the Open\+CV S\+VM default people detector. 
+\begin{DoxyParams}{Parameters}
+{\em image} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{detection_8hpp}{detection.\+hpp}\item 
+app/\hyperlink{detection_8cpp}{detection.\+cpp}\end{DoxyCompactItemize}

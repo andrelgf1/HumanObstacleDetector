@@ -1,0 +1,216 @@
+\hypertarget{classLocator}{}\section{Locator Class Reference}
+\label{classLocator}\index{Locator@{Locator}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classLocator_a309b4d4180297ebe1a15c3ddff22bb0a}{Locator} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for locator class. This is for demo purposes. The non-\/default constructor should be used to set camera parameters in cv\+::\+Mat format. \end{DoxyCompactList}\item 
+\hyperlink{classLocator_a2a33d04a9b0355c7a60f2c5e7114689a}{Locator} (cv\+::\+Mat rotationM, cv\+::\+Mat translation\+Vec, cv\+::\+Mat intrinsicM)
+\begin{DoxyCompactList}\small\item\em Constructor to set camera parameters. All parameters should be in matrix form (cv\+::\+Mat). \end{DoxyCompactList}\item 
+void \hyperlink{classLocator_a2a1903c4adab7ebecd1f4790a135a39a}{set\+Pixel\+Data} (cv\+::\+Rect \&pixel\+Data)
+\begin{DoxyCompactList}\small\item\em Receives pixel data as type cv\+::\+Rect, and sets it to the private attribute pixel\+Point. It later uses the private method pixel\+Vector() to extract important information of data given, and creates a vector of type cv\+::\+Mat. \end{DoxyCompactList}\item 
+cv\+::\+Rect \hyperlink{classLocator_abe66e0f8d5c7786be8c2154bfab43fc1}{get\+Pixel\+Data} ()
+\begin{DoxyCompactList}\small\item\em Gets pixel\+Data. \end{DoxyCompactList}\item 
+void \hyperlink{classLocator_a9c7db372b262aac0f02c774ac3753e10}{world\+Pos} ()
+\begin{DoxyCompactList}\small\item\em Calculations to obtain Real World Coordinates. Highly important to detect distance of object. \end{DoxyCompactList}\item 
+void \hyperlink{classLocator_ae702d1254f48d0b37d0e98612fde768d}{print\+Positions} ()
+\begin{DoxyCompactList}\small\item\em Prints the Real World Coordinates. \end{DoxyCompactList}\item 
+cv\+::\+Mat \hyperlink{classLocator_a0ddf0eb54e7af896ac04654602d2459d}{get\+Rotation\+Matrix} ()
+\begin{DoxyCompactList}\small\item\em Getter method to return rotation matrix. Mostly used for unit testing. \end{DoxyCompactList}\item 
+cv\+::\+Mat \hyperlink{classLocator_a9a34468f1f815a132ab3dbf62b883fb7}{get\+Translation\+Vector} ()
+\begin{DoxyCompactList}\small\item\em Getter method to return translation vector. Mostly used for unit testing. \end{DoxyCompactList}\item 
+cv\+::\+Mat \hyperlink{classLocator_a551e2fe1ea1d84838651d2a4716707b5}{get\+Instrinsic\+Matrix} ()
+\begin{DoxyCompactList}\small\item\em Getter method to return intrinsic matrix. Mostly used for unit testing. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+cv\+::\+Mat \hyperlink{classLocator_ac9f5a8f6aa5dd57776947961ca49098a}{world\+Coord}\hypertarget{classLocator_ac9f5a8f6aa5dd57776947961ca49098a}{}\label{classLocator_ac9f5a8f6aa5dd57776947961ca49098a}
+
+\begin{DoxyCompactList}\small\item\em World Coordinates in cv\+::\+Mat datatype. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Locator@{Locator}!Locator@{Locator}}
+\index{Locator@{Locator}!Locator@{Locator}}
+\subsubsection[{\texorpdfstring{Locator()}{Locator()}}]{\setlength{\rightskip}{0pt plus 5cm}Locator\+::\+Locator (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classLocator_a309b4d4180297ebe1a15c3ddff22bb0a}{}\label{classLocator_a309b4d4180297ebe1a15c3ddff22bb0a}
+
+
+Default constructor for locator class. This is for demo purposes. The non-\/default constructor should be used to set camera parameters in cv\+::\+Mat format. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+rotation matrix is conformed of \mbox{[}r1 r2 translation\mbox{]}. r3 isn\textquotesingle{}t necessary because it is a redundant cross product of the first 2 columns \index{Locator@{Locator}!Locator@{Locator}}
+\index{Locator@{Locator}!Locator@{Locator}}
+\subsubsection[{\texorpdfstring{Locator(cv\+::\+Mat rotation\+M, cv\+::\+Mat translation\+Vec, cv\+::\+Mat intrinsic\+M)}{Locator(cv::Mat rotationM, cv::Mat translationVec, cv::Mat intrinsicM)}}]{\setlength{\rightskip}{0pt plus 5cm}Locator\+::\+Locator (
+\begin{DoxyParamCaption}
+\item[{cv\+::\+Mat}]{rotationM, }
+\item[{cv\+::\+Mat}]{translation\+Vec, }
+\item[{cv\+::\+Mat}]{intrinsicM}
+\end{DoxyParamCaption}
+)}\hypertarget{classLocator_a2a33d04a9b0355c7a60f2c5e7114689a}{}\label{classLocator_a2a33d04a9b0355c7a60f2c5e7114689a}
+
+
+Constructor to set camera parameters. All parameters should be in matrix form (cv\+::\+Mat). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rotationM,translation\+Vec,intrinsicM} & These are the parameters in which to get accurate 3D position. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+Check size of matrix 
+
+\subsection{Member Function Documentation}
+\index{Locator@{Locator}!get\+Instrinsic\+Matrix@{get\+Instrinsic\+Matrix}}
+\index{get\+Instrinsic\+Matrix@{get\+Instrinsic\+Matrix}!Locator@{Locator}}
+\subsubsection[{\texorpdfstring{get\+Instrinsic\+Matrix()}{getInstrinsicMatrix()}}]{\setlength{\rightskip}{0pt plus 5cm}cv\+::\+Mat Locator\+::get\+Instrinsic\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classLocator_a551e2fe1ea1d84838651d2a4716707b5}{}\label{classLocator_a551e2fe1ea1d84838651d2a4716707b5}
+
+
+Getter method to return intrinsic matrix. Mostly used for unit testing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+\_\+intrinsicM Intrinsic Matrix as cv\+::\+Mat 
+\end{DoxyReturn}
+\index{Locator@{Locator}!get\+Pixel\+Data@{get\+Pixel\+Data}}
+\index{get\+Pixel\+Data@{get\+Pixel\+Data}!Locator@{Locator}}
+\subsubsection[{\texorpdfstring{get\+Pixel\+Data()}{getPixelData()}}]{\setlength{\rightskip}{0pt plus 5cm}cv\+::\+Rect Locator\+::get\+Pixel\+Data (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classLocator_abe66e0f8d5c7786be8c2154bfab43fc1}{}\label{classLocator_abe66e0f8d5c7786be8c2154bfab43fc1}
+
+
+Gets pixel\+Data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\index{Locator@{Locator}!get\+Rotation\+Matrix@{get\+Rotation\+Matrix}}
+\index{get\+Rotation\+Matrix@{get\+Rotation\+Matrix}!Locator@{Locator}}
+\subsubsection[{\texorpdfstring{get\+Rotation\+Matrix()}{getRotationMatrix()}}]{\setlength{\rightskip}{0pt plus 5cm}cv\+::\+Mat Locator\+::get\+Rotation\+Matrix (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classLocator_a0ddf0eb54e7af896ac04654602d2459d}{}\label{classLocator_a0ddf0eb54e7af896ac04654602d2459d}
+
+
+Getter method to return rotation matrix. Mostly used for unit testing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+\_\+rotationM Rotation matrix as cv\+::\+Mat 
+\end{DoxyReturn}
+\index{Locator@{Locator}!get\+Translation\+Vector@{get\+Translation\+Vector}}
+\index{get\+Translation\+Vector@{get\+Translation\+Vector}!Locator@{Locator}}
+\subsubsection[{\texorpdfstring{get\+Translation\+Vector()}{getTranslationVector()}}]{\setlength{\rightskip}{0pt plus 5cm}cv\+::\+Mat Locator\+::get\+Translation\+Vector (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classLocator_a9a34468f1f815a132ab3dbf62b883fb7}{}\label{classLocator_a9a34468f1f815a132ab3dbf62b883fb7}
+
+
+Getter method to return translation vector. Mostly used for unit testing. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\+\_\+trans\+Vec Trasnlation vector as cv\+::\+Mat 
+\end{DoxyReturn}
+\index{Locator@{Locator}!print\+Positions@{print\+Positions}}
+\index{print\+Positions@{print\+Positions}!Locator@{Locator}}
+\subsubsection[{\texorpdfstring{print\+Positions()}{printPositions()}}]{\setlength{\rightskip}{0pt plus 5cm}void Locator\+::print\+Positions (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classLocator_ae702d1254f48d0b37d0e98612fde768d}{}\label{classLocator_ae702d1254f48d0b37d0e98612fde768d}
+
+
+Prints the Real World Coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+Prints position of object detected (human in this case). \index{Locator@{Locator}!set\+Pixel\+Data@{set\+Pixel\+Data}}
+\index{set\+Pixel\+Data@{set\+Pixel\+Data}!Locator@{Locator}}
+\subsubsection[{\texorpdfstring{set\+Pixel\+Data(cv\+::\+Rect \&pixel\+Data)}{setPixelData(cv::Rect &pixelData)}}]{\setlength{\rightskip}{0pt plus 5cm}void Locator\+::set\+Pixel\+Data (
+\begin{DoxyParamCaption}
+\item[{cv\+::\+Rect \&}]{pixel\+Data}
+\end{DoxyParamCaption}
+)}\hypertarget{classLocator_a2a1903c4adab7ebecd1f4790a135a39a}{}\label{classLocator_a2a1903c4adab7ebecd1f4790a135a39a}
+
+
+Receives pixel data as type cv\+::\+Rect, and sets it to the private attribute pixel\+Point. It later uses the private method pixel\+Vector() to extract important information of data given, and creates a vector of type cv\+::\+Mat. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pixel\+Data} & pixel data which is given as bounding box information \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+Sets pixel\+Data to attribute pixel\+Point \index{Locator@{Locator}!world\+Pos@{world\+Pos}}
+\index{world\+Pos@{world\+Pos}!Locator@{Locator}}
+\subsubsection[{\texorpdfstring{world\+Pos()}{worldPos()}}]{\setlength{\rightskip}{0pt plus 5cm}void Locator\+::world\+Pos (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classLocator_a9c7db372b262aac0f02c774ac3753e10}{}\label{classLocator_a9c7db372b262aac0f02c774ac3753e10}
+
+
+Calculations to obtain Real World Coordinates. Highly important to detect distance of object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+Calculates real world coordinate with intrinsic and extrinsic camera parameters.
+
+world\+Coord = (((pixel\+Coord $\ast$ \+\_\+intrinsic\+M.\+inv()) -\/ \+\_\+trans\+Vec ) $\ast$ \+\_\+rotation\+M.\+inv()) / 1000; 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{locator_8hpp}{locator.\+hpp}\item 
+app/\hyperlink{locator_8cpp}{locator.\+cpp}\end{DoxyCompactItemize}

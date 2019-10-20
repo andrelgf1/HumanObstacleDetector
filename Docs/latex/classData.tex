@@ -1,0 +1,55 @@
+\hypertarget{classData}{}\section{Data Class Reference}
+\label{classData}\index{Data@{Data}}
+
+
+{\ttfamily \#include $<$data.\+hpp$>$}
+
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static cv\+::\+Mat \hyperlink{classData_a998ab1e595e2f02aa0a9af2ff68274ab}{load\+Image} (const std\+::string \&file\+Path)
+\item 
+static std\+::vector$<$ cv\+::\+Mat $>$ \hyperlink{classData_af7e7f6fe68b1f70ced7bae1d379dc59a}{load\+Images} (const std\+::string \&files\+Dir)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Handles image data loading. 
+
+\subsection{Member Function Documentation}
+\index{Data@{Data}!load\+Image@{load\+Image}}
+\index{load\+Image@{load\+Image}!Data@{Data}}
+\subsubsection[{\texorpdfstring{load\+Image(const std\+::string \&file\+Path)}{loadImage(const std::string &filePath)}}]{\setlength{\rightskip}{0pt plus 5cm}cv\+::\+Mat Data\+::load\+Image (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{file\+Path}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classData_a998ab1e595e2f02aa0a9af2ff68274ab}{}\label{classData_a998ab1e595e2f02aa0a9af2ff68274ab}
+Load an image. 
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & path to image \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+image 
+\end{DoxyReturn}
+\index{Data@{Data}!load\+Images@{load\+Images}}
+\index{load\+Images@{load\+Images}!Data@{Data}}
+\subsubsection[{\texorpdfstring{load\+Images(const std\+::string \&files\+Dir)}{loadImages(const std::string &filesDir)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$ cv\+::\+Mat $>$ Data\+::load\+Images (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{files\+Dir}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}\hypertarget{classData_af7e7f6fe68b1f70ced7bae1d379dc59a}{}\label{classData_af7e7f6fe68b1f70ced7bae1d379dc59a}
+Load all images in a directory. 
+\begin{DoxyParams}{Parameters}
+{\em files\+Path} & directory containing images \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+vector of images 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{data_8hpp}{data.\+hpp}\item 
+app/\hyperlink{data_8cpp}{data.\+cpp}\end{DoxyCompactItemize}
