@@ -1,10 +1,10 @@
 /**
  * @file data.hpp
- * @brief
+ * @brief Loads data files (images).
  * @author Pablo Sanhueza
  * @author Ryan Cunningham
  * @author Andre Gomes
- * @copyright 2019
+ * @copyright 2019 Group16
  * Distributed under the BSD License (license terms found in LICENSE or at https://www.freebsd.org/copyright/freebsd-license.html)
  */
 
@@ -12,6 +12,8 @@
 #define INCLUDE_DATA_HPP_
 
 #include <opencv2/opencv.hpp>
+#include <string>
+#include <vector>
 
 /**
  * Handles image data loading.
