@@ -1,15 +1,34 @@
+/**
+ * @file data.cpp
+ * @brief
+ * @author Pablo Sanhueza
+ * @author Ryan Cunningham
+ * @author Andre Gomes
+ * @copyright 2019
+ * Distributed under the BSD License (license terms found in LICENSE or at https://www.freebsd.org/copyright/freebsd-license.html)
+ */
+
 #include "data.hpp"
 
 #include <string>
 #include <vector>
 
 cv::Mat Data::loadImage(const std::string& filePath) {
-  cv::Mat zeros = cv::Mat::zeros(1,1, CV_64F);
-  return zeros;
+  return cv::imread(filePath);
 }
 
 std::vector<cv::Mat> Data::loadImages(const std::string& filesDir) {
-  cv::Mat zeros = cv::Mat::zeros(1,1, CV_64F);
-  std::vector<cv::Mat> unUsed = {zeros};
-  return unUsed;
+  // get all file names in directory
+  std::vector<std::string> fileNames;
+  cv::glob(filesDir, fileNames);
+
+  // read each image and add to vector
+  std::vector<cv::Mat> images;
+  for (auto fileName : fileNames) {
+    cv::Mat image = cv::imread(fileName);
+
+    images.push_back(image);
+  }
+
+  return images;
 }
