@@ -5,8 +5,12 @@ add_executable(
     main.cpp
     data_test.cpp
     ../app/data.cpp
-
-
+	detection_test.cpp
+	../app/detection.cpp
+	locator_test.cpp
+	../app/locator.cpp
+	program_options_test.cpp
+	../app/program_options.cpp
 )
 
 target_include_directories(cpp-test PUBLIC ../vendor/googletest/googletest/include 
