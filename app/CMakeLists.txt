@@ -1,7 +1,11 @@
-add_executable(shell-app main.cpp)
+add_executable(shell-app main.cpp data.cpp)
 include_directories(
     ${CMAKE_SOURCE_DIR}/include
 )
 
 find_package(OpenCV REQUIRED)
-target_link_libraries(shell-app ${OpenCV_LIBS})
+find_package(Boost REQUIRED COMPONENTS system filesystem program_options)
+
+link_directories(shell-app ${OpenCV_LIBS} ${Boost_LIBRARIES})
+
+target_link_libraries(shell-app ${OpenCV_LIBS} ${Boost_LIBRARIES})
