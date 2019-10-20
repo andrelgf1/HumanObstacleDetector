@@ -1,6 +1,6 @@
 # Human Obstacle Detector - ACME
-[![Build Status](https://travis-ci.org/cunninghamr/cpp-boilerplate.svg?branch=master)](https://travis-ci.org/cunninghamr/cpp-boilerplate)
-[![Coverage Status](https://coveralls.io/repos/github/cunninghamr/cpp-boilerplate/badge.svg?branch=master)](https://coveralls.io/github/cunninghamr/cpp-boilerplate?branch=master)
+[![Build Status](https://travis-ci.org/cunninghamr/HumanObstacleDetector.svg?branch=master)](https://travis-ci.org/cunninghamr/HumanObstacleDetector)
+[![Coverage Status](https://coveralls.io/repos/github/cunninghamr/HumanObstacleDetector/badge.svg?branch=master)](https://coveralls.io/github/cunninghamr/HumanObstacleDetector?branch=master)
 ---
 
 ## Overview
