@@ -19,7 +19,7 @@ cv::Mat Data::loadImage(const std::string& filePath) {
 
 std::vector<cv::Mat> Data::loadImages(const std::string& filesDir) {
   // get all file names in directory
-  std::vector<std::string> fileNames;
+  std::vector<cv::String> fileNames;
   cv::glob(filesDir, fileNames);
 
   // read each image and add to vector
