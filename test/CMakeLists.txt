@@ -7,6 +7,8 @@ add_executable(
     ../app/data.cpp
 	detection_test.cpp
 	../app/detection.cpp
+	locator_test.cpp
+	../app/locator.cpp
 	program_options_test.cpp
 	../app/program_options.cpp
 )

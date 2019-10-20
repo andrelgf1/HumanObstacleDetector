@@ -1,4 +1,4 @@
-add_executable(shell-app main.cpp data.cpp detection.cpp program_options.cpp)
+add_executable(shell-app main.cpp data.cpp detection.cpp locator.cpp program_options.cpp)
 include_directories(
     ${CMAKE_SOURCE_DIR}/include
 )
