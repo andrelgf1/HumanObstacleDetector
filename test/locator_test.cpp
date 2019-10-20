@@ -17,7 +17,7 @@
  */
 TEST(LocatorTest, testDefaultLocator) {
   /// Create locator object
-  locator pos;
+  Locator pos;
   cv::Mat rotationMatrix = pos.getRotationMatrix();
   cv::Mat transVector = pos.getTranslationVector();
   cv::Mat intrinsicMatrix = pos.getInstrinsicMatrix();
@@ -48,7 +48,7 @@ TEST(LocatorTest, testLocatorConstructor) {
   cv::Mat transVec = (cv::Mat_< float > (1,3) << 1, 1, 1);
   cv::Mat intrinsic = (cv::Mat_< float > (3,3) << 0, 0, 0, 0, 0, 0, 0, 0, 0);
 
-  locator pos(rotation, transVec, intrinsic);
+  Locator pos(rotation, transVec, intrinsic);
 
   /// Test values to ensure default constructor is initialized to correct values.
   cv::Mat diffTest1 = rotation != pos.getRotationMatrix();
@@ -68,7 +68,7 @@ TEST(LocatorTest, testLocatorConstructor) {
  */
 TEST(LocatorTest, testSetPixelData) {
   /// Create locator object
-  locator pos;
+  Locator pos;
   /// Valid arguments to create rectangle
   int x = 0;
   int y = 0;
@@ -91,7 +91,7 @@ TEST(LocatorTest, testSetPixelData) {
  */
 TEST(LocatorTest, testWorldPos) {
   /// Create locator object
-  locator pos;
+  Locator pos;
   /// Valid arguments to create rectangle
   int x = 0;
   int y = 0;

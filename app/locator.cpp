@@ -9,7 +9,7 @@ Locator::Locator(){
 
 }
 
-Locator::locator(cv::Mat rotationM, cv::Mat translationVec, cv::Mat intrinsicM):
+Locator::Locator(cv::Mat rotationM, cv::Mat translationVec, cv::Mat intrinsicM):
  _rotationM(rotationM),
 _transVec(translationVec),
 _intrinsicM(intrinsicM) {
