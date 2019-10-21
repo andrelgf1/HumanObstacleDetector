@@ -7,32 +7,29 @@
 ## Overview
 
 Robotics is a rapidly growing field, and as the technology advances new robots are created to serve
-different purposes in commercial and military applications. As the interaction between robots and human has
-increased exponentially over the past years, one big concern which has emerged with this development is
-human safety in environments with the presence of robots.
-Robots are responsible for many accidents involving humans and because of that, part of the population
-has aversion to the robotics field. This strong dislike prevents the growing of robotics field and consequently
-limits the development of companies involved in this area.
-This project presents a software solution to minimize accidents between robots and humans, where the
-module will be using computer vision tools in order to make robots recognize humans and identify their
-location. The most significant output of the module will be the location/distance of the person, where this will
-allow for any mobile robot to accurately identify human obstacles to later provide this information/data to
-other modules in the system to be able to either avoid or stop the robot from colliding with human obstacles.
+different purposes in commercial and military applications. As the interaction between robots and humans has increased exponentially over the past years, one big concern which has emerged with this development is human safety in environments with the presence of robots. Robots are responsible for many accidents involving humans and because of that, part of the population has aversion to the robotics field. This strong dislike prevents the growing of robotics field and consequently limits the development of companies involved in this area. This project presents a software solution to minimize accidents between robots and humans, where the module will be using computer vision tools in order to make robots recognize humans and identify their location. The most significant output of the module will be the location/distance of the person, where this will allow for any mobile robot to accurately identify human obstacles to later provide this information/data to other modules in the system to be able to either avoid or stop the robot from colliding with human obstacles.
 
-The porpose of the project is to identify humans and provide their real world location in order to the robot to avoid accidents  in the desired enviroment. 
-In order to achieve this goal it is going to be used suport vector machine and histogram of oriented gradients to identify humans in the image providedby the camera. To implement the techniques previously mentioned, the team decided to use OpenCV library  and to provide the real world location it will be use the the camera intrinsic parameters , camera extrinsic parametes and the pixel location in the image to properly calculate the real world position of the human.
-The project implentation is mainly composed by 4 classes which are Data,Detection,Locator and ProgramOptions.The ProgramOption class......, Data class loads all the images where humans should be identified, the Detection class is responsable for the  identification of the human using OpenCv SVM and Hogdescriptors and provide the bouding box for the locator class, the locator class provides the real world location based on the image pixel location.
-The program starts by loading all the images of the desired diretory , once all the images are loaded we used openCV trained svm in order to classify humans and hogdescriptor to check the presence of humans. If  human is detected,a bouding box with the location of the human  is returned.
+The porpose of the project is to identify humans and provide their real world location in order for the robot to avoid accidents in its environment. In order to achieve this goal, Suport Vector Machines and Histogram of Oriented Gradients are used to identify humans in the images provided by the camera. To implement the techniques previously mentioned, the team decided to use the OpenCV library. The camera intrinsic and extrinsic parametes and the pixel location of the human in the image are used to properly calculate the real world position of the human. The project implementation is mainly composed by 4 classes which are Data, Detection, Locator and ProgramOptions. The ProgramOption class reads arguments from the command line, the Data class loads all the images where humans should be identified, the Detection class is responsable for the  identification of the human using OpenCv SVM and Hogdescriptors and provide the bouding box for the locator class, and the Locator class provides the real world location based on the image pixel location.
+
+The program starts by loading all the images of the desired diretory. Once all the images are loaded the OpenCV trained SVM is used to classify humans and the HOGDescriptor is used to check the presence of humans. If a human is detected,a bounding box with the location of the human is returned.
 <p align="center">
 <img src="https://github.com/cunninghamr/HumanObstacleDetector/blob/iteration2/app/images/Readme/pic_read.png">
 </p>
 
 
-Once the bouding box information is ready , it is possilbe calculate the pixel position of the humann and with the pixel position using the inverse of the homography matrix , which is the inverse of the multiplication of the camaera intrinsic parameters and the extrinsic prameters. 
+Once the bounding box information is ready, it is possible to calculate the pixel position of the human and with the pixel position using the inverse of the homography matrix , which is the inverse of the multiplication of the camera intrinsic parameters and the extrinsic prameters we can find the 3d real world location.
+In the demo the values in feets are shown as in the follwing image
+
+<p align="center">
+<img src="https://github.com/cunninghamr/HumanObstacleDetector/blob/iteration2/app/images/Readme/humanDetection.jpg">
+</p>
 
 ## Personnel
 Andre Gomes - Graduated in computer engineering at Uniceub in Brazil.
+
 Ryan Cunningham - Works for Booz Allen Hamilton as a full-stack software engineer. Graduated with a Computer Science degree from UMBC in 2013.
+
+Pablo -
 
 ## License
 
@@ -49,25 +46,6 @@ Redistribution and use in source and binary forms, with or without modification,
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 ```
-
- 
-
-You will also see the usage of the AIP process and pair programming. In addition you will find different iterations of UML diagrams as the design of the source codes progress. 
-
-Implementation:
-
-- TDD
-- OOP Principles
-- C++11/14
-- cppcheck
-- Google style guide with cpplint
-
-
-Testing:
-
-- Unit Tests
-- Test Coverage with Coveralls
-- Passing tests on Travis
 
 
 ## AIP Google Sheet
@@ -171,7 +149,7 @@ This generates a index.html page in the build/coverage sub-directory that can be
 ## How to run demo
 ```
 cd <build inside the cloned folder>
-Run program: ./app/shell-app
+Run program: ./app/shell-app -p ../app/images/positive/ -n ../app/images/negative/
 ```
 
 ## How to run tests
@@ -183,26 +161,27 @@ Run tests: ./test/cpp-test
 
 ## Known Issues/Bugs
 
-Stub to be completed in Iteration 2.
+For some images, a single detected human may have multiple bounding boxes
+
 
 ### How to Generate Doxygen Documentation 
 
 How to install Doxygen:
-'''
+```
 sudo apt-get install doxygen
-'''
+```
 
 Inside the cloned Directory, enter the following terminal commands.
-'''
+```
  doxygen Doxyfile
-'''
+```
 
 Opening Doxygen Documentation in Firefox
-'''
+```
  cd Docs
  cd html
  firefox index.html
-'''
+```
 
 
 ## Plugins
