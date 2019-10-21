@@ -10,11 +10,12 @@
 
 #include "data.hpp"
 
-#include <boost/filesystem.hpp>
 #include <gtest/gtest.h>
 
 #include <string>
 #include <vector>
+
+#include <boost/filesystem.hpp>
 
 TEST(DataTest, testLoadImages) {
   // load the positive testing images

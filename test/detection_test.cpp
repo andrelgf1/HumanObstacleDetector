@@ -11,10 +11,11 @@
 #include "detection.hpp"
 
 #include <gtest/gtest.h>
-#include <opencv2/opencv.hpp>
 
 #include <string>
 #include <vector>
+
+#include <opencv2/opencv.hpp>
 
 #include "data.hpp"
 
