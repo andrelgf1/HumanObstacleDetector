@@ -8,13 +8,13 @@
  * Distributed under the BSD License (license terms found in LICENSE or at https://www.freebsd.org/copyright/freebsd-license.html)
  */
 
-#include <boost/filesystem.hpp>
-#include <boost/program_options.hpp>
-#include <opencv2/opencv.hpp>
-
 #include <iostream>
 #include <string>
 #include <vector>
+
+#include <boost/filesystem.hpp>
+#include <boost/program_options.hpp>
+#include <opencv2/opencv.hpp>
 
 #include "data.hpp"
 #include "detection.hpp"

@@ -1,16 +1,18 @@
 /**
  * @file detection.cpp
- * @brief
- * @author
- * @copyright 2019
+ * @brief Detects humans in images using HOGDescriptor and SVM.
+ * @author Pablo Sanhueza
+ * @author Andre Gomes
+ * @author Ryan Cunningham
+ * @copyright 2019 Pablo Sanhueza, Andre Gomes, Ryan Cunningham
  * Distributed under the BSD License (license terms found in LICENSE or at https://www.freebsd.org/copyright/freebsd-license.html)
  */
 
 #include "detection.hpp"
 
-#include <opencv2/opencv.hpp>
-
 #include <vector>
+
+#include <opencv2/opencv.hpp>
 
 Detection::Detection() {
   // set the default people detector SVM to the HOG detector
