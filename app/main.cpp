@@ -97,8 +97,6 @@ int main(int argc, const char* argv[]) {
 
         /// show the image
         cv::imshow("Images", testImage);
-
-       cv::imwrite("./humanDetection.jpg", testImage);
       }
 
       /// display the image for 1 second
