@@ -29,7 +29,7 @@ Andre Gomes - Graduated in computer engineering at Uniceub in Brazil.
 
 Ryan Cunningham - Works for Booz Allen Hamilton as a full-stack software engineer. Graduated with a Computer Science degree from UMBC in 2013.
 
-Pablo -
+Pablo - Graduated with a B.S. in Mechanical Engineering from UMCP in 2017. Currently pursuing a M. Eng. in Robotics at UMCP. Highly interested in Machine Learning and Autonomous Robots. 
 
 ## License
 
