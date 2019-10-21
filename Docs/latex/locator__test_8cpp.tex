@@ -1,0 +1,107 @@
+\hypertarget{locator__test_8cpp}{}\section{test/locator\+\_\+test.cpp File Reference}
+\label{locator__test_8cpp}\index{test/locator\+\_\+test.\+cpp@{test/locator\+\_\+test.\+cpp}}
+
+
+Unit Tests for \hyperlink{classLocator}{Locator}.  
+
+
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\\*
+{\ttfamily \#include $<$opencv2/opencv.\+hpp$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include \char`\"{}locator.\+hpp\char`\"{}}\\*
+Include dependency graph for locator\+\_\+test.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{locator__test_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{locator__test_8cpp_a220b42f605fa9dedb81bc399fadf3b2c}{T\+E\+ST} (Locator\+Test, test\+Default\+Locator)
+\item 
+\hyperlink{locator__test_8cpp_a6b5222818ca559c9a3348c1c0eb32e69}{T\+E\+ST} (Locator\+Test, test\+Locator\+Constructor)
+\item 
+\hyperlink{locator__test_8cpp_a9aff7c95f2920240392f1b87474a737c}{T\+E\+ST} (Locator\+Test, test\+Set\+Pixel\+Data)
+\item 
+\hyperlink{locator__test_8cpp_a7b2120d471025b66b53503f096df1bc2}{T\+E\+ST} (Locator\+Test, test\+World\+Pos)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Unit Tests for \hyperlink{classLocator}{Locator}. 
+
+\begin{DoxyAuthor}{Author}
+Pablo Sanhueza 
+
+Ryan Cunningham 
+
+Andre Gomes
+\end{DoxyAuthor}
+\begin{DoxyCopyright}{Copyright}
+2019 
+\end{DoxyCopyright}
+
+
+\subsection{Function Documentation}
+\index{locator\+\_\+test.\+cpp@{locator\+\_\+test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!locator\+\_\+test.\+cpp@{locator\+\_\+test.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Locator\+Test, test\+Default\+Locator)}{TEST(LocatorTest, testDefaultLocator)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Locator\+Test}]{, }
+\item[{test\+Default\+Locator}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{locator__test_8cpp_a220b42f605fa9dedb81bc399fadf3b2c}{}\label{locator__test_8cpp_a220b42f605fa9dedb81bc399fadf3b2c}
+Tests Default Constructor. Create locator object
+
+Test values to ensure default constructor is initialized to correct values.
+
+Boolean check to determine if test can pass. This is used since it E\+X\+P\+E\+C\+T\+\_\+\+E\+Q() doesn\textquotesingle{}t like dealing with cv\+::\+Mat. \index{locator\+\_\+test.\+cpp@{locator\+\_\+test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!locator\+\_\+test.\+cpp@{locator\+\_\+test.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Locator\+Test, test\+Locator\+Constructor)}{TEST(LocatorTest, testLocatorConstructor)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Locator\+Test}]{, }
+\item[{test\+Locator\+Constructor}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{locator__test_8cpp_a6b5222818ca559c9a3348c1c0eb32e69}{}\label{locator__test_8cpp_a6b5222818ca559c9a3348c1c0eb32e69}
+Test Constructor. Create locator object
+
+Test values to ensure default constructor is initialized to correct values.
+
+Boolean check to determine if test can pass. This is used since it E\+X\+P\+E\+C\+T\+\_\+\+E\+Q() doesn\textquotesingle{}t like dealing with cv\+::\+Mat. \index{locator\+\_\+test.\+cpp@{locator\+\_\+test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!locator\+\_\+test.\+cpp@{locator\+\_\+test.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Locator\+Test, test\+Set\+Pixel\+Data)}{TEST(LocatorTest, testSetPixelData)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Locator\+Test}]{, }
+\item[{test\+Set\+Pixel\+Data}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{locator__test_8cpp_a9aff7c95f2920240392f1b87474a737c}{}\label{locator__test_8cpp_a9aff7c95f2920240392f1b87474a737c}
+Tests set\+Pixel\+Data() method from \hyperlink{classLocator}{Locator} Class. Create locator object
+
+Valid arguments to create rectangle
+
+Create rectangle...
+
+Sets pixel data for testing \index{locator\+\_\+test.\+cpp@{locator\+\_\+test.\+cpp}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!locator\+\_\+test.\+cpp@{locator\+\_\+test.\+cpp}}
+\subsubsection[{\texorpdfstring{T\+E\+S\+T(\+Locator\+Test, test\+World\+Pos)}{TEST(LocatorTest, testWorldPos)}}]{\setlength{\rightskip}{0pt plus 5cm}T\+E\+ST (
+\begin{DoxyParamCaption}
+\item[{Locator\+Test}]{, }
+\item[{test\+World\+Pos}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{locator__test_8cpp_a7b2120d471025b66b53503f096df1bc2}{}\label{locator__test_8cpp_a7b2120d471025b66b53503f096df1bc2}
+Tests world\+Pos() method from \hyperlink{classLocator}{Locator} Class. Create locator object
+
+Valid arguments to create rectangle
+
+Create rectangle...
+
+Test Coordinate results computed by beforehand using formula -\/$>$ \mbox{[}X, Y, Z\mbox{]} = ((\mbox{[}u, v, 1\mbox{]} $\ast$ Intrin\+\_\+\+Matrix\+\_\+\+Inv) -\/ \mbox{[}tx, ty, tz\mbox{]} ) $\ast$ Rot\+\_\+\+Matrix\+\_\+\+Inv
+
+Sets pixel data for testing
+
+Takes difference of all elements in matrix and compares them
+
+Boolean check to determine if test can pass. This is used since it E\+X\+P\+E\+C\+T\+\_\+\+E\+Q() doesn\textquotesingle{}t like dealing with cv\+::\+Mat. 

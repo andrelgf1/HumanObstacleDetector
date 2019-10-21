@@ -1,0 +1,73 @@
+\hypertarget{classProgramOptions}{}\section{Program\+Options Class Reference}
+\label{classProgramOptions}\index{Program\+Options@{Program\+Options}}
+
+
+{\ttfamily \#include $<$program\+\_\+options.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classProgramOptions_af4d748ab66175b1a0c67d38f96403eff}{Program\+Options} ()
+\item 
+void \hyperlink{classProgramOptions_ab2603a54fd83c450cf81d074f061d0ee}{parse} (int argc, const char $\ast$argv\mbox{[}$\,$\mbox{]})
+\item 
+std\+::string \hyperlink{classProgramOptions_a18eb214deb1a7196986dc0269bbdad4c}{get\+Value} (const std\+::string \&option\+Name)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Defines available program options and retrieves option values. 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Program\+Options@{Program\+Options}!Program\+Options@{Program\+Options}}
+\index{Program\+Options@{Program\+Options}!Program\+Options@{Program\+Options}}
+\subsubsection[{\texorpdfstring{Program\+Options()}{ProgramOptions()}}]{\setlength{\rightskip}{0pt plus 5cm}Program\+Options\+::\+Program\+Options (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{classProgramOptions_af4d748ab66175b1a0c67d38f96403eff}{}\label{classProgramOptions_af4d748ab66175b1a0c67d38f96403eff}
+add program options 
+
+\subsection{Member Function Documentation}
+\index{Program\+Options@{Program\+Options}!get\+Value@{get\+Value}}
+\index{get\+Value@{get\+Value}!Program\+Options@{Program\+Options}}
+\subsubsection[{\texorpdfstring{get\+Value(const std\+::string \&option\+Name)}{getValue(const std::string &optionName)}}]{\setlength{\rightskip}{0pt plus 5cm}std\+::string Program\+Options\+::get\+Value (
+\begin{DoxyParamCaption}
+\item[{const std\+::string \&}]{option\+Name}
+\end{DoxyParamCaption}
+)}\hypertarget{classProgramOptions_a18eb214deb1a7196986dc0269bbdad4c}{}\label{classProgramOptions_a18eb214deb1a7196986dc0269bbdad4c}
+Gets the value for an options 
+\begin{DoxyParams}{Parameters}
+{\em option\+Name} & the name of the option \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the option value 
+\end{DoxyReturn}
+if the option is not provided, throw an exception and print the options
+
+get the option value \index{Program\+Options@{Program\+Options}!parse@{parse}}
+\index{parse@{parse}!Program\+Options@{Program\+Options}}
+\subsubsection[{\texorpdfstring{parse(int argc, const char $\ast$argv[])}{parse(int argc, const char *argv[])}}]{\setlength{\rightskip}{0pt plus 5cm}void Program\+Options\+::parse (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{const char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{classProgramOptions_ab2603a54fd83c450cf81d074f061d0ee}{}\label{classProgramOptions_ab2603a54fd83c450cf81d074f061d0ee}
+Parse command line arguments as options. 
+\begin{DoxyParams}{Parameters}
+{\em argc} & the number of arguments \\
+\hline
+{\em argv} & the list of arguments \\
+\hline
+\end{DoxyParams}
+get and store the parsed options
+
+if no options provided, stop program and print options
+
+if help option provided, stop program and print options 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{program__options_8hpp}{program\+\_\+options.\+hpp}\item 
+app/\hyperlink{program__options_8cpp}{program\+\_\+options.\+cpp}\end{DoxyCompactItemize}
