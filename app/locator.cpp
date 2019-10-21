@@ -92,6 +92,6 @@ cv::Mat Locator::worldPos() {
 
 void Locator::printPositions() {
   /// Prints position of object detected (human in this case).
-  std::cout << "Position of Object in meters [x,y,z]: " << worldCoord
+  std::cout << "Position of Object in feet [x,y,z]: " << worldCoord
       << std::endl;
 }
