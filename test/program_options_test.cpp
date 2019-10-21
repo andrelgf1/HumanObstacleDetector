@@ -19,10 +19,11 @@ TEST(ProgramOptionsTest, testNoOptions) {
   ProgramOptions options = ProgramOptions();
 
   try {
-    // first option is program name
+    /// first option is program name
     const char* argv[] = { "hi" };
     int argc = 1;
 
+    /// if this doesn't throw an exception then the test will fail
     options.parse(argc, argv);
     FAIL();
   } catch (const std::invalid_argument& e) {
@@ -33,12 +34,13 @@ TEST(ProgramOptionsTest, testNoOptions) {
 TEST(ProgramOptionsTest, testGetValueNotProvided) {
   ProgramOptions options = ProgramOptions();
 
-  // first option is program name
+  /// first option is program name
   const char* argv[] = { "", "--positive-test-images-path", "" };
   int argc = 3;
 
   options.parse(argc, argv);
 
+  /// if this doesn't throw an exception then the test will fail
   try {
     options.getValue("negative-test-images-path");
     FAIL();
@@ -50,12 +52,12 @@ TEST(ProgramOptionsTest, testGetValueNotProvided) {
 TEST(ProgramOptionsTest, testGetValueProvided) {
   ProgramOptions options = ProgramOptions();
 
-  // first option is program name
+  /// first option is program name
   const char* argv[] = { "", "--positive-test-images-path", "" };
   int argc = 3;
 
   options.parse(argc, argv);
 
-  // if this throws an exception then the test will fail
+  /// if this throws an exception then the test will fail
   options.getValue("positive-test-images-path");
 }

@@ -15,12 +15,12 @@
 #include <opencv2/opencv.hpp>
 
 Detection::Detection() {
-  // set the default people detector SVM to the HOG detector
+  /// set the default people detector SVM to the HOG detector
   hog.setSVMDetector(cv::HOGDescriptor::getDefaultPeopleDetector());
 }
 
 std::vector<cv::Rect> Detection::detect(const cv::Mat& image) {
-  // detect humans and get the bounding boxes for each
+  /// detect humans and get the bounding boxes for each
   std::vector<cv::Rect> detections;
   hog.detectMultiScale(image, detections);
 
