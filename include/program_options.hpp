@@ -13,6 +13,8 @@
 
 #include <boost/program_options.hpp>
 
+#include <string>
+
 /**
  * Defines available program options and retrieves option values.
  */

@@ -33,7 +33,7 @@ class Locator {
     * @param none
     * @return none
     */
-    Locator ();
+    Locator();
 
    /**
     * @brief Constructor to set camera parameters. All parameters should be in matrix form (cv::Mat).

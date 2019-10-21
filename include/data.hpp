@@ -11,9 +11,10 @@
 #ifndef INCLUDE_DATA_HPP_
 #define INCLUDE_DATA_HPP_
 
-#include <opencv2/opencv.hpp>
 #include <string>
 #include <vector>
+
+#include <opencv2/opencv.hpp>
 
 /**
  * Handles image data loading.

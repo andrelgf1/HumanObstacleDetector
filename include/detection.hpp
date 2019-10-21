@@ -1,17 +1,19 @@
 /**
  * @file detection.hpp
- * @brief
- * @author
- * @copyright 2019
+ * @brief Detects humans in images using HOGDescriptor and SVM.
+ * @author Pablo Sanhueza
+ * @author Andre Gomes
+ * @author Ryan Cunningham
+ * @copyright 2019 Pablo Sanhueza, Andre Gomes, Ryan Cunningham
  * Distributed under the BSD License (license terms found in LICENSE or at https://www.freebsd.org/copyright/freebsd-license.html)
  */
 
 #ifndef INCLUDE_DETECTION_HPP_
 #define INCLUDE_DETECTION_HPP_
 
-#include <opencv2/opencv.hpp>
-
 #include <vector>
+
+#include <opencv2/opencv.hpp>
 
 /**
  * Performs Histogram of Gradients detection of humans in images using Support Vector Machines.
