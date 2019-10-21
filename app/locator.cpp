@@ -1,11 +1,11 @@
 /**
  * @file locator.cpp
- * @author Pablo Sanhueza
- * @author Andre Gomes
- * @author Ryan Cunningham
  * @brief End result of class is to return the position of the object desired. Class will receive dimensions and starting pixel
  * position of a bounding box, and from there determine the world coordinate position depending on the camera.
  * Here we assume the intrinsic and extrinsic parameters of the camera.
+ * @author Pablo Sanhueza
+ * @author Andre Gomes
+ * @author Ryan Cunningham
  * @copyright 2019 Pablo Sanhueza, Andre Gomes, Ryan Cunningham
  * Distributed under the BSD License (license terms found in LICENSE or at https://www.freebsd.org/copyright/freebsd-license.html)
  */

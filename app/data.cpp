@@ -1,10 +1,10 @@
 /**
  * @file data.cpp
- * @brief
+ * @brief Loads data files (images).
  * @author Pablo Sanhueza
  * @author Ryan Cunningham
  * @author Andre Gomes
- * @copyright 2019
+ * @copyright 2019 Pablo Sanhueza, Andre Gomes, Ryan Cunningham
  * Distributed under the BSD License (license terms found in LICENSE or at https://www.freebsd.org/copyright/freebsd-license.html)
  */
 
