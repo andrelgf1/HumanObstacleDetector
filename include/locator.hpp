@@ -1,19 +1,12 @@
 /**
- * Copyright (C)
- * 2019 - Group16: Pablo Sanhueza, Andre Gomes, & Ryan Cunningham
- */
-
-/** @author Pablo Sanhueza
- *  @author Andre Gomes
- *  @author Ryan Cunningham
- *
- *  @file locator.hpp
- *
- *  @brief End result of class is to return the position of the object desired. Class will receive dimensions and starting pixel
- *  position of a bounding box, and from there determine the world coordinate position depending on the camera.
- *  Here we assume the intrinsic and extrinsic parameters of the camera.
- *
- *  @copyright Copyright 2019 Group16
+ * @file locator.hpp
+ * @brief End result of class is to return the position of the object desired. Class will receive dimensions and starting pixel
+ * position of a bounding box, and from there determine the world coordinate position depending on the camera.
+ * Here we assume the intrinsic and extrinsic parameters of the camera.
+ * @author Pablo Sanhueza
+ * @author Andre Gomes
+ * @author Ryan Cunningham
+ * @copyright Copyright 2019 Pablo Sanhueza, Andre Gomes, Ryan Cunningham
  * Distributed under the BSD License (license terms found in LICENSE or at https://www.freebsd.org/copyright/freebsd-license.html)
  */
 
@@ -23,6 +16,9 @@
 #include <vector>
 #include <opencv2/opencv.hpp>
 
+/**
+ * @brief Calculates real world coordinates from image coordinates.
+ */
 class Locator {
   public:
   /// World Coordinates in cv::Mat datatype

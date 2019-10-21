@@ -16,7 +16,7 @@
 #include <string>
 
 /**
- * Defines available program options and retrieves option values.
+ * @brief Defines available program options and retrieves option values.
  */
 class ProgramOptions {
  public:

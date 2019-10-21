@@ -4,7 +4,7 @@
  * @author Pablo Sanhueza
  * @author Ryan Cunningham
  * @author Andre Gomes
- * @copyright 2019 Group16
+ * @copyright 2019 Pablo Sanhueza, Andre Gomes, Ryan Cunningham
  * Distributed under the BSD License (license terms found in LICENSE or at https://www.freebsd.org/copyright/freebsd-license.html)
  */
 
@@ -17,7 +17,7 @@
 #include <opencv2/opencv.hpp>
 
 /**
- * Handles image data loading.
+ * @brief Handles image data loading.
  */
 class Data {
  public:

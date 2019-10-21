@@ -16,7 +16,7 @@
 #include <opencv2/opencv.hpp>
 
 /**
- * Performs Histogram of Gradients detection of humans in images using Support Vector Machines.
+ * @brief Performs Histogram of Gradients detection of humans in images using Support Vector Machines.
  */
 class Detection {
  public:
