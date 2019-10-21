@@ -1,0 +1,37 @@
+./test/locator_test.cpp:43:  Consider using EXPECT_EQ instead of EXPECT_TRUE(a == b)  [readability/check] [2]
+./test/locator_test.cpp:44:  Consider using EXPECT_EQ instead of EXPECT_TRUE(a == b)  [readability/check] [2]
+./test/locator_test.cpp:45:  Consider using EXPECT_EQ instead of EXPECT_TRUE(a == b)  [readability/check] [2]
+./test/locator_test.cpp:67:  Consider using EXPECT_EQ instead of EXPECT_TRUE(a == b)  [readability/check] [2]
+./test/locator_test.cpp:68:  Consider using EXPECT_EQ instead of EXPECT_TRUE(a == b)  [readability/check] [2]
+./test/locator_test.cpp:69:  Consider using EXPECT_EQ instead of EXPECT_TRUE(a == b)  [readability/check] [2]
+./test/locator_test.cpp:70:  Redundant blank line at the end of a code block should be deleted.  [whitespace/blank_line] [3]
+./test/locator_test.cpp:94:  Redundant blank line at the end of a code block should be deleted.  [whitespace/blank_line] [3]
+./test/locator_test.cpp:126:  Consider using EXPECT_EQ instead of EXPECT_TRUE(a == b)  [readability/check] [2]
+./test/locator_test.cpp:127:  Redundant blank line at the end of a code block should be deleted.  [whitespace/blank_line] [3]
+./include/locator.hpp:27:  public: should be indented +1 space inside class Locator  [whitespace/indent] [3]
+./include/locator.hpp:51:  Is this a non-const reference? If so, make const or use a pointer: cv::Rect &pixelData  [runtime/references] [2]
+./include/locator.hpp:65:  Weird number of spaces at line-start.  Are you using a 2-space indent?  [whitespace/indent] [3]
+./include/locator.hpp:95:  private: should be indented +1 space inside class Locator  [whitespace/indent] [3]
+./include/locator.hpp:96:  Weird number of spaces at line-start.  Are you using a 2-space indent?  [whitespace/indent] [3]
+./include/locator.hpp:96:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+./include/locator.hpp:99:  Weird number of spaces at line-start.  Are you using a 2-space indent?  [whitespace/indent] [3]
+./include/locator.hpp:99:  Lines should be <= 80 characters long  [whitespace/line_length] [2]
+./include/locator.hpp:102:  Weird number of spaces at line-start.  Are you using a 2-space indent?  [whitespace/indent] [3]
+./include/locator.hpp:105:  Weird number of spaces at line-start.  Are you using a 2-space indent?  [whitespace/indent] [3]
+./include/locator.hpp:108:  Weird number of spaces at line-start.  Are you using a 2-space indent?  [whitespace/indent] [3]
+./include/locator.hpp:127:  At least two spaces is best between code and comments  [whitespace/comments] [2]
+Done processing ./app/program_options.cpp
+Done processing ./app/locator.cpp
+Done processing ./app/detection.cpp
+Done processing ./app/data.cpp
+Done processing ./app/main.cpp
+Done processing ./test/data_test.cpp
+Done processing ./test/program_options_test.cpp
+Done processing ./test/detection_test.cpp
+Done processing ./test/main.cpp
+Done processing ./test/locator_test.cpp
+Done processing ./include/program_options.hpp
+Done processing ./include/data.hpp
+Done processing ./include/detection.hpp
+Done processing ./include/locator.hpp
+Total errors found: 22
