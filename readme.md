@@ -13,7 +13,7 @@ The porpose of the project is to identify humans and provide their real world lo
 
 The program starts by loading all the images of the desired diretory. Once all the images are loaded the OpenCV trained SVM is used to classify humans and the HOGDescriptor is used to check the presence of humans. If a human is detected,a bounding box with the location of the human is returned.
 <p align="center">
-<img src="https://github.com/cunninghamr/HumanObstacleDetector/blob/iteration2/app/images/Readme/pic_read.png">
+<img src="https://github.com/cunninghamr/HumanObstacleDetector/blob/master/app/images/Readme/pic_read.png">
 </p>
 
 
@@ -21,7 +21,7 @@ Once the bounding box information is ready, it is possible to calculate the pixe
 In the demo the values in feets are shown as in the follwing image
 
 <p align="center">
-<img src="https://github.com/cunninghamr/HumanObstacleDetector/blob/iteration2/app/images/Readme/humanDetection.jpg">
+<img src="https://github.com/cunninghamr/HumanObstacleDetector/blob/master/app/images/Readme/humanDetection.jpg">
 </p>
 
 ## Personnel
