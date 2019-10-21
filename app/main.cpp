@@ -42,18 +42,41 @@ int main(int argc, const char* argv[]) {
     /// if there were detections, get the bounding box and location
     if (detections.size() > 0) {
       for (auto detection : detections) {
-        /// draw the detected bounding box and show the image
-        cv::rectangle(testImage, detection, cv::Scalar(0, 255, 0), 3);
-        cv::imshow("Images", testImage);
-
         /// get the real world position from the detection
         locator.setPixelData(detection);
-        locator.worldPos();
+        cv::Mat location = locator.worldPos();
         locator.printPositions();
+        std::cout << location << std::endl;
+
+        /// draw the detected bounding box
+        cv::rectangle(testImage, detection, cv::Scalar(0, 255, 0), 3);
+
+        /// get a list of x, y, and z coordinates as strings
+        std::stringstream locationText;
+        locationText << location;
+        std::vector<std::string> locationTextParts;
+        std::string locationTextPart;
+        while (std::getline(locationText, locationTextPart, ',')) {
+          locationTextParts.push_back(locationTextPart);
+        }
+
+        /// print the coordinates in the bounding box
+        cv::putText(testImage, locationTextParts[0],
+                    cv::Point(detection.x, detection.y + 30),
+                    cv::FONT_HERSHEY_SIMPLEX, 0.9, cv::Scalar(0, 255, 0), 2);
+        cv::putText(testImage, locationTextParts[1],
+                    cv::Point(detection.x, detection.y + 60),
+                    cv::FONT_HERSHEY_SIMPLEX, 0.9, cv::Scalar(0, 255, 0), 2);
+        cv::putText(testImage, locationTextParts[2],
+                    cv::Point(detection.x, detection.y + 90),
+                    cv::FONT_HERSHEY_SIMPLEX, 0.9, cv::Scalar(0, 255, 0), 2);
+
+        /// show the image
+        cv::imshow("Images", testImage);
       }
 
       /// display the image for 1 second
-      cv::waitKey(1000);
+      cv::waitKey(4000);
     }
   }
 }
