@@ -30,17 +30,41 @@ int main(int argc, const char* argv[]) {
 
   Locator locator = Locator();
 
-  /// get the directory containing positive test images
-  std::string testPath = options.getValue("positive-test-images-path");
-  std::vector<cv::Mat> testImages = Data::loadImages(testPath);
+  std::vector<cv::Mat> testImages;
 
-  /// test images with humans
+  try {
+    /// get the directory containing positive test images
+    std::string testPath = options.getValue("positive-test-images-path");
+    std::vector<cv::Mat> positiveImages = Data::loadImages(testPath);
+    testImages.insert(testImages.end(),
+                      positiveImages.begin(), positiveImages.end());
+  } catch (std::invalid_argument& e) {
+    /// do nothing if the argument wasn't provided
+  }
+
+  try {
+    /// get the directory containing negative test images
+    std::string testPath = options.getValue("negative-test-images-path");
+    std::vector<cv::Mat> negativeImages = Data::loadImages(testPath);
+    testImages.insert(testImages.end(),
+                      negativeImages.begin(), negativeImages.end());
+  } catch (std::invalid_argument& e) {
+    /// do nothing if the argument wasn't provided
+  }
+
+  int imageNumber = 1;
+  /// test images for human detection
   for (auto testImage : testImages) {
+    std::cout << "Image: " << imageNumber++ << std::endl;
+
     /// detect humans in image
     std::vector<cv::Rect> detections = detector.detect(testImage);
 
-    /// if there were detections, get the bounding box and location
-    if (detections.size() > 0) {
+    /// if there were no detection, print a message saying so
+    if (detections.size() == 0) {
+      std::cout << "No humans detected!" << std::endl;
+    } else {
+      /// if there were detections, get the bounding box and location
       for (auto detection : detections) {
         /// get the real world position from the detection
         locator.setPixelData(detection);
@@ -73,6 +97,8 @@ int main(int argc, const char* argv[]) {
 
         /// show the image
         cv::imshow("Images", testImage);
+
+       cv::imwrite("./humanDetection.jpg", testImage);
       }
 
       /// display the image for 1 second
